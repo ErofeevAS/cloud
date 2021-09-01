@@ -1,24 +1,24 @@
 package com.erofeev.cloud.bookshop.dao.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+@Document(collection = "books")
 public class Book {
     @Id
-    public Long id;
+    public String id;
 
     @Indexed
     public String name;
     @Indexed
     public String author;
 
-    public Book() {
-    }
-
-    public Book(String name, String author) {
-        this.name = name;
-        this.author = author;
-    }
 }
