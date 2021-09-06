@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 
 @Document(collection = "books")
-public class Book {
+public class Book implements Comparable<Book> {
     @Id
     public String id;
 
@@ -21,4 +21,8 @@ public class Book {
     @Indexed
     public String author;
 
+    @Override
+    public int compareTo(Book o) {
+        return this.id.compareTo(o.id);
+    }
 }

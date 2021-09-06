@@ -1,6 +1,5 @@
 package com.erofeev.cloud.bookshop.service;
 
-import com.erofeev.cloud.bookshop.dao.model.Book;
 import com.erofeev.cloud.bookshop.service.dto.BookDto;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
